@@ -117,7 +117,7 @@
             android:id="@+id/tvGithub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="https://github.com/yourusername/ZakatGoldCalculator"
+            android:text="https://github.com/nurulamira270702/ZG-Calculator"
             android:textColor="#0000EE"
             android:textSize="18sp"
             android:autoLink="web"/>
