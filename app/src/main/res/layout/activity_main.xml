@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@color/cream">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/zg_logo"
+                android:contentDescription="ZG Logo"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zakat Gold Calculator"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_gold"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter gold weight, select gold type, and enter current gold value per gram."
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:textColor="@color/dark_gold"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"/>
+
+
+
+        </LinearLayout>
+
+
+
+        <EditText
+            android:id="@+id/etWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gold Weight (gram)"
+            android:inputType="numberDecimal"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:layout_marginTop="10dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select 'Keep' for stored gold and 'Wear' for jewellery gold."
+            android:textSize="13sp"
+            android:textStyle="italic"
+            android:textColor="@color/dark_gold"
+            android:layout_marginTop="5dp"/>
+
+
+
+        <EditText
+            android:id="@+id/etValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gold Value per Gram"
+            android:inputType="numberDecimal"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate Zakat"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/gold"
+            android:textColor="@color/black"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note: Zakat is charged at 2.5% of the zakat payable gold value."
+            android:textSize="13sp"
+            android:textStyle="italic"
+            android:textColor="@color/dark_gold"
+            android:layout_marginTop="8dp"/>
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gold"
+            android:padding="12dp"
+            android:layout_marginTop="30dp"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:text="ITEM"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:padding="12dp"/>
+
+                <TextView
+                    android:text="VALUE"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:padding="12dp"/>
+
+            </TableRow>
+
+            <View
+                android:layout_height="2dp"
+                android:background="@color/black"/>
+
+            <TableRow>
+
+                <TextView
+                    android:text="Total Gold Value"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:padding="12dp"/>
+
+                <TextView
+                    android:id="@+id/tvGoldValue"
+                    android:text="RM 0.00"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:padding="12dp"/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:text="Gold Weight (Zakat)"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:padding="12dp"/>
+
+                <TextView
+                    android:id="@+id/tvUruf"
+                    android:text="0 gram"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:padding="12dp"/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:text="Zakat Payable Value"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:padding="12dp"/>
+
+                <TextView
+                    android:id="@+id/tvPayable"
+                    android:text="RM 0.00"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:padding="12dp"/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:text="Total Zakat"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:padding="12dp"/>
+
+                <TextView
+                    android:id="@+id/tvZakat"
+                    android:text="RM 0.00"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:padding="12dp"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/btnAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About Developer"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/dark_gold"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</ScrollView>
+
